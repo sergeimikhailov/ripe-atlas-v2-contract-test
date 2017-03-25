@@ -1,10 +1,10 @@
 package nz.mikhailov.atlas;
 
-import io.restassured.module.jsv.JsonSchemaValidator;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.http.ContentType.JSON;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static java.lang.System.getenv;
 
 public class ProbesResourceContractTest {
@@ -21,7 +21,7 @@ public class ProbesResourceContractTest {
     .then()
         .statusCode(200)
         .contentType(JSON)
-        .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("probe.schema.json"));
+        .body(matchesJsonSchemaInClasspath("probe.schema.json"));
   }
 
 }
