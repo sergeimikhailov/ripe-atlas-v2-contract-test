@@ -7,5 +7,5 @@ repositories {
 dependencies {
     testCompile 'junit:junit:4.12'
     testCompile 'io.rest-assured:rest-assured:3.0.2'
+    testCompile 'io.rest-assured:json-schema-validator:3.0.2'
 }
-

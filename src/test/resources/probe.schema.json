@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "properties": {
+    "address_v4": {
+      "type": "string"
+    },
+    "address_v6": {
+      "type": ["string", "null"]
+    },
+    "asn_v4": {
+      "type": "integer"
+    },
+    "asn_v6": {
+      "type": ["integer", "null"]
+    },
+    "country_code": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "first_connected": {
+      "type": "integer"
+    },
+    "geometry": {
+      "properties": {
+        "coordinates": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "is_anchor": {
+      "type": "boolean"
+    },
+    "is_public": {
+      "type": "boolean"
+    },
+    "last_connected": {
+      "type": "integer"
+    },
+    "prefix_v4": {
+      "type": "string"
+    },
+    "prefix_v6": {
+      "type": ["string", "null"]
+    },
+    "status": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "since": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "status_since": {
+      "type": "integer"
+    },
+    "tags": {
+      "items": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "total_uptime": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
